@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+      <script>
+          var socket = io()
+      </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Chat</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Chat Box</h2>
+      <hr />
+      <div class="form_msg">
+        <form>
+          <div class="msg"></div>
+          <div class="row">
+            <input class="write_msg col-sm-8"></input>
+            <button class="btn btn-success col-sm-2 ml-3 mt-3 mb-1">Send</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+
+
+    
+  </body>
+</html>
