@@ -12,7 +12,7 @@ $(document).ready(function () {
 
   sock.on('new_msg', (data) => {
     msg.val('');
-    msg_container.html('<p>' + data.username + ' : ' + data.message + '</p>');
+    msg_container.append('<p>' + data.username + ' : ' + data.message + '</p>');
   });
 
   msg.bind('keypress', () => {
