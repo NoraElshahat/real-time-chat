@@ -15,12 +15,19 @@ const io = socket(server);
 
 io.on('connection', function (socket) {
   console.log('socket connection');
-});
+  socket.username = 'User';
 
-io.on('new user', function (data) {
-  io.userId = data;
-  activeUsers.add(data);
-  io.emit('new user', [...activeUsers]);
+  // listen to new message
+  socket.on('new_msg', (data) => {
+    io.sockets.emit('new_msg', {
+      message: data.message,
+      username: socket.username,
+    });
+    //listen on typing a message
+    // socket.on('typing', (data) => {
+    //   io.broadcast.emit('typing', { username: socket.username });
+    // });
+  });
 });
 
 io.on('disconnect', () => {

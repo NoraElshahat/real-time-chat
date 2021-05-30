@@ -25,3 +25,8 @@ h2 {
   padding: 10px;
   margin: 10px 0 0 15px;
 }
+#typing {
+  width: 100%;
+  height: 10%;
+  background-color: red;
+}

@@ -3,6 +3,8 @@
 <html lang="en">
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
       <script>
           var socket = io()
       </script>
@@ -19,17 +21,17 @@
       <hr />
       <div class="form_msg">
         <form>
-          <div class="msg"></div>
+          <div class="msg" id="msg_container">
+            <div id="typing"></div>
+          </div>
           <div class="row">
-            <input class="write_msg col-sm-8"></input>
-            <button class="btn btn-success col-sm-2 ml-3 mt-3 mb-1">Send</button>
+            <input class="write_msg col-sm-8" id="message"></input>
+            <button class="btn btn-success col-sm-2 ml-3 mt-3 mb-1" id="send_msg">Send</button>
           </div>
           
         </form>
       </div>
     </div>
-
-
-    
+    <script src="main.js"></script>
   </body>
 </html>
